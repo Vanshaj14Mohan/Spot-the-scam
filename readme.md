@@ -130,6 +130,6 @@ streamlit run app/dashboard.py
 
 ## 👨‍💻 Author
 
-Developed as part of a Data Science project assignment titled **"Spot the Scam"**.
+Developed with ❤️ as a part of a Data Science project assignment titled **"Spot the Scam"**.
 
 ```
