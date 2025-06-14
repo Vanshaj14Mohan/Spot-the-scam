@@ -1,10 +1,3 @@
-Absolutely! Here's a complete and professional `README.md` file for your **Spot the Scam - Job Fraud Detection** project. It includes setup, structure, usage, and notes.
-
----
-
-### 📄 `README.md`
-
-```markdown
 # 🚨 Spot the Scam - Job Fraud Detection Dashboard
 
 This project is a machine learning-based dashboard that identifies fraudulent job postings using a trained classification model. It takes job listing data from a CSV file, predicts whether each entry is a scam or legitimate, and displays key insights with visualizations.
@@ -137,6 +130,6 @@ streamlit run app/dashboard.py
 
 ## 👨‍💻 Author
 
-Developed as part of a Data Science project assignment titled **"Spot the Scam"**.
+Developed with ❤️ as a part of a Data Science project assignment titled **"Spot the Scam"**.
 
 ```
