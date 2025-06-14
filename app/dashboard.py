@@ -101,22 +101,17 @@ if uploaded_file is not None:
         else:
             st.info("No numerical columns available for heatmap.")
 
-    # NEW GRAPH - Time Series Analysis (if 'date' column exists)
-    # col6, _, _ = st.columns([1, 0.1, 0.1])  # Optional spacing
+    # NEW GRAPH - Location-based Fraudulent Job Count
+    col6, _, _ = st.columns([1, 0.1, 0.1])  # Optional spacing
 
-    # with col6:
-    #     if 'date' in df.columns:
-    #         st.write("### Time Series: Fraudulent Posts Over Time")
-    #         df['location'] = pd.to_datetime(df['location'], errors='coerce')
-    #         ts_df = df.dropna(subset=['location'])
-    #         ts_counts = ts_df.groupby(ts_df['location'].dt.to_period('M'))['fraud_prediction'].sum()
-    #         ts_counts.index = ts_counts.index.to_timestamp()
+    with col6:
+        st.write("### Top Locations with Fraudulent Listings")
+        top_locations = df[df['fraud_prediction'] == 1]['location'].value_counts().head(10)
 
-    #         fig_ts, ax_ts = plt.subplots()
-    #         ts_counts.plot(ax=ax_ts, marker='o', linestyle='-', color='teal')
-    #         ax_ts.set_ylabel("Number of Fraudulent Posts")
-    #         ax_ts.set_xlabel("location")
-    #         ax_ts.set_title("Monthly Fraudulent Posts")
-    #         st.pyplot(fig_ts)
-    #     else:
-    #         st.info("No 'date' column found for time series analysis.")
+        fig_loc, ax_loc = plt.subplots(figsize=(6, 4))
+        top_locations.plot(kind='barh', color='crimson', ax=ax_loc)
+        ax_loc.set_xlabel("Count")
+        ax_loc.set_ylabel("Location")
+        ax_loc.set_title("Top 10 Fraud-Prone Job Locations")
+        st.pyplot(fig_loc)
+
