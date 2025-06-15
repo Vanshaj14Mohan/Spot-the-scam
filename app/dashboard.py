@@ -55,7 +55,7 @@ if uploaded_file is not None:
     # 🚀 Some more graphs
     st.subheader("📊 Additional Data Insights")
 
-    col3, _, _ = st.columns([1, 0.1, 0.1])  # Optional spacing with narrow columns
+    col3, _, _ = st.columns([1, 0.1, 0.1]) # Optional spacing with narrow columns
 
     with col3:
         st.write("### Top Job Titles in Fraudulent Listings")
