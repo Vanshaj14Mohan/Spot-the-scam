@@ -121,7 +121,7 @@ if uploaded_file is not None:
                 data=df,
                 ax=ax_box,
                 palette='Set2',
-                legend=False             # ✅ Avoids extra legend
+                legend=False # ✅ Avoids extra legend
             )
             ax_box.set_xlabel("Employment Type")
             ax_box.set_ylabel("Fraud Probability")
